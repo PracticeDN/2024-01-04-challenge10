@@ -1,0 +1,100 @@
+body {
+  background-color: rgb(81, 154, 250);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snow-man-container {
+  .cap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cap-high {
+      width: 70px;
+      height: 60px;
+      background-color: black;
+    }
+    .cap-low {
+      width: 100px;
+      height: 15px;
+      background-color: black;
+      z-index: 1;
+    }
+  }
+
+  .snow-man {
+    position: relative;
+    top: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .head {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .face {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .eyes {
+          display: flex;
+          gap: 10px;
+
+          .eye {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: black;
+          }
+        }
+
+        .mouth {
+          width: 50px;
+          height: 20px;
+          background-color: black;
+          border-radius: 0 0 50% 50%;
+        }
+      }
+    }
+
+    .body {
+      position: relative;
+      top: -10px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: white;
+      z-index: 1;
+
+      .arm {
+        position: absolute;
+        width: 100px;
+        height: 5px;
+        background-color: rgb(156, 70, 13);
+        z-index: 0;
+
+        &:first-child {
+          left: -50px;
+          top: 20px;
+          transform: rotate(40deg);
+        }
+
+        &:nth-child(2) {
+          right: -50px;
+          top: 20px;
+          transform: rotate(-40deg);
+        }
+      }
+    }
+  }
+}
